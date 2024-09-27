@@ -2,6 +2,11 @@
     <string name="app_name">Contact Manager</string>
     <string name="Add_contact">Add Contact</string>
     <string name="ViewContactList">View Contact list</string>
-    <string name="MensajeContacto">Agregue contactos nuevos</string>
-    <string name="MensajeListaContactos">Lista de contactos</string>
+    <string name="MensajeContacto">Add new contacts</string>
+    <string name="MensajeListaContactos">Contact list</string>
+
+    // Opciones de menu
+    <string name="Menu_Save">Save</string>
+    <string name="Menu_Delete">Delete</string>
+    <string name="Menu_Cancel">Cancel</string>
 </resources>

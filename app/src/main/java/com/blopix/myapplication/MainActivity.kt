@@ -1,7 +1,11 @@
 package com.blopix.myapplication
 
+import Util.util
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -23,18 +27,41 @@ class MainActivity : AppCompatActivity() {
 
         val btnPantallaContact: Button = findViewById<Button>(R.id.main_AddContact)
         btnPantallaContact.setOnClickListener(View.OnClickListener {view ->
-            val intentPantallaContact = Intent(this, ContactActivity::class.java)
-            startActivity(intentPantallaContact)
+            util.openActivity(this, ContactActivity::class.java)
 
             Toast.makeText(this, getString(R.string.MensajeContacto).toString(), Toast.LENGTH_LONG).show()
         })
 
         val btnPantallaContactList: Button = findViewById<Button>(R.id.main_viewContactList)
         btnPantallaContactList.setOnClickListener(View.OnClickListener {view ->
-            val intentPantallaContactList = Intent(this, ContactListActivity::class.java)
-            startActivity(intentPantallaContactList)
+            util.openActivity(this, ContactListActivity::class.java)
 
             Toast.makeText(this, getString(R.string.MensajeListaContactos).toString(), Toast.LENGTH_LONG).show()
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_contact -> {
+                util.openActivity(this, ContactActivity::class.java)
+                return true
+            }
+            R.id.menu_viewContactList -> {
+                util.openActivity(this, ContactListActivity::class.java)
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun openActivity(objClass: Class<*>) {
+        val intentContent = Intent(this, objClass )
+        startActivity(intentContent)
     }
 }
