@@ -60,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun openActivity(objClass: Class<*>) {
+    /*private fun openActivity(objClass: Class<*>) {
         val intentContent = Intent(this, objClass )
         startActivity(intentContent)
-    }
+    }*/
 }
