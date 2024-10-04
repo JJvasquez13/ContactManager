@@ -15,4 +15,6 @@
     <string name="ContactAddress">Dirección</string>
     <string name="ContactEmail">Correo</string>
     <string name="msgContactNotFound">El contacto no existe o no fue encontrado</string>
+    <string name="msgSave">Contacto guardado correctamente</string>
+    <string name="msgMissingData">Falta información</string>
 </resources>

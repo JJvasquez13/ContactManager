@@ -18,5 +18,7 @@
     <string name="ContactAddress">Address</string>
     <string name="ContactEmail">Email</string>
     <string name="msgContactNotFound">The contact doesn\'t exists</string>
+    <string name="msgSave">Saved contact</string>
+    <string name="msgMissingData">Missing data to save</string>
 
 </resources>
