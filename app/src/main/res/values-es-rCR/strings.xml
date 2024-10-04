@@ -8,4 +8,11 @@
     <string name="Menu_Save">Guardar</string>
     <string name="Menu_Delete">Eliminar</string>
     <string name="Menu_Cancel">Cancelar</string>
+    <string name="ContactId">IdContacto</string>
+    <string name="ContactName">Nombre</string>
+    <string name="ContactLastName">Apellido</string>
+    <string name="ContactPhone">Teléfono</string>
+    <string name="ContactAddress">Dirección</string>
+    <string name="ContactEmail">Correo</string>
+    <string name="msgContactNotFound">El contacto no existe o no fue encontrado</string>
 </resources>

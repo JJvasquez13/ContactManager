@@ -9,4 +9,14 @@
     <string name="Menu_Save">Save</string>
     <string name="Menu_Delete">Delete</string>
     <string name="Menu_Cancel">Cancel</string>
+
+    //Contacto del usuario
+    <string name="ContactId">ContactId</string>
+    <string name="ContactName">Name</string>
+    <string name="ContactLastName">LastName</string>
+    <string name="ContactPhone">Phone</string>
+    <string name="ContactAddress">Address</string>
+    <string name="ContactEmail">Email</string>
+    <string name="msgContactNotFound">The contact doesn\'t exists</string>
+
 </resources>
