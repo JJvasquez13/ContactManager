@@ -26,17 +26,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btnPantallaContact: Button = findViewById<Button>(R.id.main_AddContact)
-        btnPantallaContact.setOnClickListener(View.OnClickListener {view ->
+        btnPantallaContact.setOnClickListener(View.OnClickListener { view ->
             util.openActivity(this, ContactActivity::class.java)
 
-            Toast.makeText(this, getString(R.string.MensajeContacto).toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.MensajeContacto).toString(), Toast.LENGTH_LONG)
+                .show()
         })
 
         val btnPantallaContactList: Button = findViewById<Button>(R.id.main_viewContactList)
-        btnPantallaContactList.setOnClickListener(View.OnClickListener {view ->
+        btnPantallaContactList.setOnClickListener(View.OnClickListener { view ->
             util.openActivity(this, ContactListActivity::class.java)
 
-            Toast.makeText(this, getString(R.string.MensajeListaContactos).toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                this,
+                getString(R.string.MensajeListaContactos).toString(),
+                Toast.LENGTH_LONG
+            ).show()
         })
     }
 
@@ -52,10 +57,12 @@ class MainActivity : AppCompatActivity() {
                 util.openActivity(this, ContactActivity::class.java)
                 return true
             }
+
             R.id.menu_viewContactList -> {
                 util.openActivity(this, ContactListActivity::class.java)
                 return true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

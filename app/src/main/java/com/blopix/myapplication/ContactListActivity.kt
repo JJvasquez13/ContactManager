@@ -1,6 +1,9 @@
 package com.blopix.myapplication
 
+import Model.ContactModel
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,12 @@ class ContactListActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val contactModel = ContactModel(this)
+        val lstContact = findViewById<ListView>(R.id.lstContactList)
+        val adapter =
+            ArrayAdapter(this, android.R.layout.simple_list_item_1, contactModel.getContactNames())
+
+        lstContact.adapter = adapter
     }
 }

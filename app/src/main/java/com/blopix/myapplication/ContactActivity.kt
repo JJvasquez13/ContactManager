@@ -21,6 +21,7 @@ class ContactActivity : AppCompatActivity() {
     private lateinit var txtPhone: EditText
     private lateinit var txtEmail: EditText
     private lateinit var txtAddress: EditText
+    private lateinit var contactModel: ContactModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class ContactActivity : AppCompatActivity() {
             insets
         }
 
+        contactModel = ContactModel(this)
         txtId = findViewById<EditText>(R.id.txtContact_id)
         txtName = findViewById<EditText>(R.id.txtContact_name)
         txtLastName = findViewById<EditText>(R.id.txtContact_lastName)
@@ -52,14 +54,17 @@ class ContactActivity : AppCompatActivity() {
                 saveContact()
                 return true
             }
+
             R.id.menu_delete -> {
                 deleteContact()
                 return true
             }
+
             R.id.menu_cancel -> {
                 cleanContact()
                 return true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -70,11 +75,11 @@ class ContactActivity : AppCompatActivity() {
             contact.id = txtId.text.toString()
             contact.name = txtName.text.toString()
             contact.lastName = txtLastName.text.toString()
-            contact.phone= txtPhone.text.toString()?.toInt()!!
+            contact.phone = txtPhone.text.toString()?.toInt()!!
             contact.email = txtEmail.text.toString()
             contact.address = txtAddress.text.toString()
             if (dataValidation(contact)) {
-                ContactModel.addContact(contact)
+                contactModel.addContact(contact)
                 cleanContact()
                 Toast.makeText(this, R.string.msgSave, Toast.LENGTH_LONG).show()
             } else {
