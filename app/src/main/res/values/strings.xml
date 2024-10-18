@@ -19,6 +19,10 @@
     <string name="ContactEmail">Email</string>
     <string name="msgContactNotFound">The contact doesn\'t exists</string>
     <string name="msgSave">Saved contact</string>
+    <string name="msgUpdate">Updated contact</string>
     <string name="msgMissingData">Missing data to save</string>
+    <string name="msgDelete">Delete successful</string>
+    <string name="msgMissingId">Missing contact ID</string>
+    <string name="msgNotInEditMode">Not in edit mode</string>
 
 </resources>

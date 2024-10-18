@@ -16,5 +16,9 @@
     <string name="ContactEmail">Correo</string>
     <string name="msgContactNotFound">El contacto no existe o no fue encontrado</string>
     <string name="msgSave">Contacto guardado correctamente</string>
+    <string name="msgUpdate">Contacto actualizado</string>
     <string name="msgMissingData">Falta información</string>
+    <string name="msgDelete">Borrado satisfactoriamente</string>
+    <string name="msgMissingId">No se encontro el id</string>
+    <string name="msgNotInEditMode">No esta en modo de edición</string>
 </resources>

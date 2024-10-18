@@ -10,6 +10,7 @@
         android:id="@+id/menu_delete"
         android:enabled="false"
         android:title="@string/Menu_Delete"
+        android:visible="false"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_cancel"

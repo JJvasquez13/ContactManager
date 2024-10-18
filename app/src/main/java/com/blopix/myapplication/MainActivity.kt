@@ -1,6 +1,8 @@
 package com.blopix.myapplication
 
 import Util.util
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -43,6 +45,27 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         })
+
+        val btnMainDialog = findViewById<Button>(R.id.btnMainDialog)
+        btnMainDialog.setOnClickListener(View.OnClickListener {
+            DisplayDialog()
+        })
+    }
+
+    private fun DisplayDialog() {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setMessage("Desea cerrar la aplicacion?")
+            .setCancelable(false)
+            .setPositiveButton("si", DialogInterface.OnClickListener { dialog, id ->
+                finish()
+            })
+            .setNegativeButton("No", DialogInterface.OnClickListener { dialog, id ->
+                dialog.cancel()
+            })
+
+        val alert = dialogBuilder.create()
+        alert.setTitle("Titulo del dialogo")
+        alert.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
