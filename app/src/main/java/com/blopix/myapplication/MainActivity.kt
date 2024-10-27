@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,11 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.MensajeListaContactos).toString(),
                 Toast.LENGTH_LONG
             ).show()
+        })
+
+        val btnPantallaCustomList: Button = findViewById<Button>(R.id.btnCustomList)
+        btnPantallaCustomList.setOnClickListener(View.OnClickListener { view ->
+            util.openActivity(this, CustomListActivity::class.java)
         })
 
         val btnMainDialog = findViewById<Button>(R.id.btnMainDialog)
